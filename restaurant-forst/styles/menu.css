@@ -1,0 +1,195 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/amin-ramezani-w2My0OSSi_0-unsplash.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gloock', serif;
+}
+
+@media screen and (max-width: 767px) {
+
+    body {
+        background-color: #313131;
+        overflow-x: hidden;
+    }
+
+    nav .hamburger {
+        display: block;
+        position: fixed;
+        left: 90%;
+    }
+
+    .hamburger .bar {
+        background-color: #FFF5EE;
+    }
+
+    nav .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    nav .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    nav .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 30px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: -2rem;
+        transition: 0.3s;
+        background-color: #313131;
+    }
+
+    .nav-menu a {
+        color: #FFF5EE;
+    }
+
+    .nav-item{
+        margin: 16px 0;    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .menu-container {
+        margin: -4.2rem;
+    }
+
+    .app-item {
+        font-size: small;
+    }
+}
+
+/* @media screen and (max-width: 1045px) {
+    body {
+        background-color: #FFF5EE;
+    }
+
+    .logo a {
+        color: #313131;
+    }
+
+    .nav-menu a {
+        color: #313131;
+    }
+} */
+
+
+header {
+    margin-bottom: 5rem;
+}
+
+nav a {
+    color: #FFF5EE;
+    text-decoration: none;
+}
+
+.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        height: 6rem;
+}
+
+.navbar .logo {
+    font-family: 'Fuggles', cursive;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu li {
+    list-style: none;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: coral ;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+span.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF5EE;
+}
+
+#top-head {
+    margin: 2rem;
+    color: #FFF5EE;
+    text-align: center;
+}
+
+#top-head::before {
+    content: '-';
+}
+
+#top-head::after {
+    content: '-';
+}
+
+
+.appetizers, .entrees, .desserts {
+    background-color: #313131;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #FFF5EE;
+    color: #FFF5EE;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.menu-head {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.app-item, .entree-item, .dessert-item {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
